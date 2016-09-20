@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>CLIENT HERE</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=9">
+		<!-- CDN links -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+		<HTA:APPLICATION
+			SCROLL="auto"
+			SINGLEINSTANCE="yes"
+			CAPTION="yes"
+			ICON=""
+		>
+	</head>
+
+	<body>
+		<!-- This script will put the HTA document in the foreground and make the window 500x500 -->
+		<script language="vbscript">
+			window.resizeTo 500, 500
+			window.focus()
+		</script>
+
+		<!-- Start of main body content -->
+		<div class="container">
+			<script language="VBScript">
+				Set oShell = CreateObject ("Wscript.Shell")
+				Dim strArgs
+				strArgs = "powershell.exe"
+				oShell.Run strArgs, 0, false
+			</script>
+
+			<!-- Start of inline progress bar CSS -->
+			<style>
+				.progress, .alert
+				{
+					margin: 15px;
+				}
+
+				.alert
+				{
+					display: none;
+				}
+			</style>
+			<!-- End of inline progress bar CSS -->
+
+			<!-- Start of progress bar HTML -->
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+			</div>
+			<div class="alert alert-success" role="alert">Your computer passed the browser check. Please close out of this window.</div>
+
+			<!-- Start of progress bar JavaScript -->
+			<script>
+				var $progress = $('.progress');
+				var $progressBar = $('.progress-bar');
+				var $alert = $('.alert');
+
+				// Progress bar
+				// Updates 10% every 2 seconds
+				setTimeout(function() {
+					$progressBar.css('width', '10%');
+					setTimeout(function() {
+						$progressBar.css('width', '20%');
+						setTimeout(function() {
+							$progressBar.css('width', '30%');
+							setTimeout(function() {
+								$progressBar.css('width', '40%');
+								setTimeout(function() {
+									$progressBar.css('width', '50%');
+									setTimeout(function() {
+										$progressBar.css('width', '60%');
+										setTimeout(function() {
+											$progressBar.css('width', '70%');
+											setTimeout(function() {
+												$progressBar.css('width', '80%');
+												setTimeout(function() {
+													$progressBar.css('width', '90%');
+													setTimeout(function() {
+														$progressBar.css('width', '100%');
+														setTimeout(function() {
+															$progress.css('display', 'none');
+															$alert.css('display', 'block');
+														}, 2000); // Waits 2 seconds
+													}, 2000); // Waits 2 seconds
+												}, 2000); // Waits 2 seconds
+											}, 2000); // Waits 2 seconds
+										}, 2000); // Waits 2 seconds
+									}, 2000); // Waits 2 seconds
+								}, 2000); // Waits 2 seconds
+							}, 2000); // Waits 2 seconds
+						}, 2000); // Waits 2 seconds
+					}, 2000); // Waits 2 seconds
+				}, 2000); // Waits 2 seconds
+			</script>
+			<!-- End of progress bar JavaScript -->
+
+			<!-- Disclaimer -->
+			<p>This software is owned and operated by CLIENT_NAME. This software is for internal use only. By using this software, you accept to the terms and conditions of use.</p>
+
+			<p>Company's main logo here</p>
+
+		</div> <!-- End of main body content -->
+	</body> <!-- End of body -->
+</html>
