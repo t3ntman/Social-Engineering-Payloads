@@ -9,4 +9,5 @@ The payload is a custom executable that uses the Excel icon and Right-to-Left Ov
 3. Change the `domain` string to the domain you want to make the HTTP GET request to.
 4. Change the `temp_filename` string to the filename you want created in `%TEMP%`.
 5. In Visual Studio, select `Project`, then `Properties`, and then `Application`. Change `Target Framework` to `.NET Framework 3.5`. Also change `Output Type` to `Windows Application`. This will prevent a console window from appearing when the victim double-clicks the executable. Within this same tab, make sure to change `Icon` to the provided `icon.ico` file.
+5. In Visual Studio, select `Project`, then `Properties`, and then `Resources`. Select `Add Resource` to add an actual Excel document to the "Resource" section of the PE file. I called mine "test" so make sure you change the `global::FakeExcel.Properties.Resources.test` line in `Program.cs` to accurately reflect what you named the added resource.
 6. In Visual Studio, select `Build`, and then select `Build Solution`. Verify that everything builds successfully. Execute program to verify that your website receives the HTTP GET request.
